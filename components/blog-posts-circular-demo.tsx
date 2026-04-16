@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { CircularTestimonials } from '@/components/ui/circular-testimonials';
+import { CircularTestimonials } from './ui/circular-testimonials';
 
 const blogPosts = [
   {

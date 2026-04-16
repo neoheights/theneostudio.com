@@ -1,5 +1,5 @@
 import React from "react";
-import { FlipWords } from "@/components/ui/flip-words";
+import { FlipWords } from "./ui/flip-words";
 
 export function HeroFlipWords() {
   const words = ["Timeless", "Luxury", "Bespoke"];

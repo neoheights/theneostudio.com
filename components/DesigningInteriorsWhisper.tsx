@@ -1,5 +1,5 @@
 import React from "react";
-import WhisperText from "@/components/ui/whisper-text";
+import WhisperText from "./ui/whisper-text";
 
 export function DesigningInteriorsWhisper() {
   return (
