@@ -1,0 +1,71 @@
+# ─────────────────────────────────────────────────────────────
+#  The Neo Studio — Auto Blog Draft Pipeline
+#  Runs every 2 days, generates an AI blog post via Gemini,
+#  and opens a GitHub PR for Manasa to review before publishing.
+# ─────────────────────────────────────────────────────────────
+
+name: Blog Draft Generator
+
+on:
+  schedule:
+    - cron: "0 9 */2 * *"   # 9:00 AM IST every 2 days (UTC)
+  workflow_dispatch:          # Also allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── Step 1: Checkout repo ──────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Step 2: Setup Node.js ──────────────────────────────
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # ── Step 3: Run the generator script ──────────────────
+      - name: Generate blog post with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/generate-blog.js
+
+      # ── Step 4: Open a Pull Request ────────────────────────
+      # Vercel will auto-create a preview URL for this PR.
+      # Merge the PR to publish to theneostudio.com.
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "blog: add draft — ${{ env.BLOG_TITLE }}"
+          branch: blog/auto-${{ github.run_number }}
+          delete-branch: true
+          title: "📝 Blog draft — ${{ env.BLOG_TITLE }}"
+          body: |
+            ## Auto-generated blog draft ✨
+
+            | Field | Value |
+            |---|---|
+            | **Keyword** | `${{ env.BLOG_KEYWORD }}` |
+            | **Slug** | `${{ env.BLOG_SLUG }}` |
+            | **File** | `blog-posts/${{ env.BLOG_SLUG }}.html` |
+
+            ### Before merging, please check:
+            - [ ] Read through the Vercel **preview link** above
+            - [ ] Content quality, tone, and length feel right
+            - [ ] Keyword appears naturally (not stuffed)
+            - [ ] Meta description reads well
+            - [ ] CTA link points to the right page
+
+            **To publish:** Simply merge this PR — Vercel will auto-deploy to theneostudio.com 🚀
+
+            **To edit:** Click the file in the "Files changed" tab and edit directly on GitHub.
+
+            **To reject:** Close this PR without merging.
+          labels: blog-draft

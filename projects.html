@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N5JR5R8T');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17EXSCS0R9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-17EXSCS0R9');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Studio | Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+   
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5JR5R8T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.png" alt="The Neo Studio" class="header-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <span class="logo-fallback">Neo Studio</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-offset"><section class="tiered-pricing">
+            <div class="container tier-content">
+                <div class="tier-header">
+                    <div class="tier-left">
+                        <h2 class="premium-reveal">
+                            <div class="reveal-line">Great Spaces are Crafted with Skill,</div>
+                            <div class="reveal-line">Passion, and Attention to Detail.</div>
+                        </h2>
+                    </div>
+                    <div class="tier-right">
+                        <p>From initial design support to final delivery, our complete business model ensures excellence
+                            at every stage of the project lifecycle.</p>
+                    </div>
+                </div>
+
+                <div class="category-list">
+                    <div class="category-item">
+                        <div class="category-img-wrap">
+                            <img src="assets/residencial interiors.jpeg" alt="Residential Interiors">
+                        </div>
+                        <h3>Residential Interiors</h3>
+                        <p>Curating the Art of Living Well from modern 2 BHK flat design to expansive 3 BHK interior design.</p>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-img-wrap">
+                            <img src="assets/living room.jpeg" alt="Living Room Designs">
+                        </div>
+                        <h3>Living Room Designs</h3>
+                        <p>The Social Heart: Timeless living spaces tailored for connection.</p>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-img-wrap">
+                            <img src="assets/kituchen.jpeg" alt="Kitchens">
+                        </div>
+                        <h3>Kitchens</h3>
+                        <p>The Culinary Studio: Functional kitchen interior design that inspires.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Residential & Commercial Portfolio Section -->
+        <section id="projects-portfolio" class="portfolio-section" style="padding: 100px 0; background: #fff;">
+            <div class="container">
+                <div class="portfolio-controls">
+                    <button class="tab-btn active" data-tab="residential">Residential</button>
+                    <button class="tab-btn" data-tab="commercial">Commercial</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Residential Pane -->
+                    <div class="tab-pane active" id="residential">
+                        <div class="project-card" onclick="openModal('assets/economy_hero.png')">
+                            <img src="assets/economy_hero.png" alt="Economy Residential">
+                            <div class="project-overlay">
+                                <h3>Economy</h3>
+                                <p>Smart aesthetics, smarter budget.</p>
+                            </div>
+                        </div>
+                        <div class="project-card" onclick="openModal('assets/elite.jpeg')">
+                            <img src="assets/elite.jpeg" alt="Elite Residential">
+                            <div class="project-overlay">
+                                <h3>Elite</h3>
+                                <p>Refined luxury for sophisticated living.</p>
+                            </div>
+                        </div>
+                        <div class="project-card" onclick="openModal('assets/luxe.jpeg')">
+                            <img src="assets/luxe.jpeg" alt="Luxe Residential">
+                            <div class="project-overlay">
+                                <h3>Luxe</h3>
+                                <p>Bespoke elegance without compromise.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commercial Pane -->
+                    <div class="tab-pane" id="commercial">
+                        <div class="project-card" onclick="openModal('assets/industrial.jpeg')">
+                            <img src="assets/industrial.jpeg" alt="Industrial">
+                            <div class="project-overlay">
+                                <h3>Industrial</h3>
+                                <p>Precision engineering and architectural scale.</p>
+                            </div>
+                        </div>
+                        <div class="project-card" onclick="openModal('assets/retail.jpeg')">
+                            <img src="assets/retail.jpeg" alt="Retail">
+                            <div class="project-overlay">
+                                <h3>Retail</h3>
+                                <p>Captivating brand environments and storefronts.</p>
+                            </div>
+                        </div>
+                        <div class="project-card" onclick="openModal('assets/workspace.jpeg')">
+                            <img src="assets/workspace.jpeg" alt="Workspace">
+                            <div class="project-overlay">
+                                <h3>Workspaces</h3>
+                                <p>Ergonomic environments built for productivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="exclusive-partners">
+            <div class="container">
+                <div class="partners-header">
+                    <div class="header-text">
+                        <h2 class="script-heading shiny-text">Exclusive Partners</h2>
+                        <p>Together, we are not just building interiors we're curating living experiences that reflect
+                            individuality, detail, and enduring quality.</p>
+                    </div>
+                    <div class="header-logos">
+                        <img src="assets/astronea-logo.png" alt="Astronea Logo" class="partner-logo">
+                        <img src="assets/schuller-logo.png" alt="Schuller Logo" class="partner-logo">
+                    </div>
+                </div>
+                <div class="partners-showcase">
+                    <div class="showcase-item">
+                        <div class="showcase-img-wrap">
+                            <img src="assets/astronea-wardrobe.jpg" alt="Astronea Wardrobe Concept">
+                        </div>
+                        <div class="showcase-label">Astronea Wardrobe Concept</div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-img-wrap">
+                            <img src="assets/schuller-kitchen.jpg" alt="Schuller Kitchen Concept">
+                        </div>
+                        <div class="showcase-label">Schuller Kitchen Concept</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="banner-promo-section">
+            <div class="container">
+                <div class="banner-card-wrapper">
+                    <img src="assets/banner.jpeg" alt="Join Neo Studio" class="promo-banner-img">
+                    <div class="banner-promo-overlay">
+                        <h2 class="banner-overlay-text">The life you picture inside your perfect home begins with one decision: <br> <span style="color: #e6e632;">START TODAY!</span></h2>
+                        <a href="contact.html" class="btn-primary-modern">Get Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="milestones">
+            <div class="container">
+                <div class="milestone-intro">
+                    <h2 class="split-reveal">Our Milestones!</h2>
+                    <p class="gsap-reveal">Every milestone is built on passion, detail, and collaboration for our
+                        clients. Let's create the next one together.</p>
+                </div>
+                
+                <div class="certifications-showcase">
+                    <img src="assets/certfications.jpeg" alt="Certifications" class="certs-img">
+                    <img src="assets/certificate2.png" alt="Certifications" class="certs-img">
+                </div>
+                <div class="awards-grid">
+                    <!-- Achievement Card 1 -->
+                    <div class="award-card gsap-reveal">
+                        <div class="card-badge">Winner</div>
+                        <div class="award-logo-box">
+                            <img src="assets/i.png" alt="India SME 100">
+                        </div>
+                        <div class="award-content">
+                            <h3>India SME 100</h3>
+                            <p>Neo Heights Builders and Promoters Pvt Ltd has been honored as one of the Top 100 Winners
+                                of the 10th Edition of the India SME 100 Awards 2023, selected from over 31,000
+                                nominations received for this edition.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Card 2 -->
+                    <div class="award-card gsap-reveal">
+                        <div class="card-badge">Prestigious</div>
+                        <div class="award-logo-box">
+                            <img src="assets/n.png" alt="Neo Heights Award">
+                        </div>
+                        <div class="award-content">
+                            <span class="premium-label">Honored with the Prestigious</span>
+                            <h3 class="award-header-title">"India SME 100 Award 2023"</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section></main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-split">
+                <div class="footer-heading">
+                    <h2>Let's Discuss your Vision<br>Connect with us</h2>
+                </div>
+                <div class="footer-desc">
+                    <p>From outdated kitchens to tired bathrooms, we<br>create spaces that make you fall in love<br>with your home again.</p>
+                </div>
+            </div>
+            
+            <div class="footer-cards">
+                <div class="f-card">
+                    <div class="f-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a5e830" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="f-text">
+                        <p>Achuth Square Complex, 1018/1, 1st Floor 24th Main Rd, 13th Cross Rd, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102</p>
+                    </div>
+                    <div class="f-arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a5e830" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="f-text">
+                        <a href="mailto:hello@theneostudio.com">hello@theneostudio.com</a>
+                    </div>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a5e830" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="f-text">
+                        <a href="tel:+919972283300">+91 99722 83300</a>
+                    </div>
+                    <div class="f-arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-bar">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/theneostudioofficial" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="https://www.instagram.com/the_neo_studio/" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="https://www.linkedin.com/company/the-neo-studio/" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="https://www.theneostudio.com/" class="social-icon" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></a>
+                    <a href="https://www.youtube.com/@theneostudio" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                </div>
+                <div class="copyright">
+                    <p>2026 &copy; All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="modal.js"></script>
+
+
+
+
+</body></html>
+
