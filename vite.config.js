@@ -33,8 +33,6 @@ export default defineConfig({
         'blog-posts/kitchen-layouts-workflow': path.resolve(__dirname, 'blog-posts/kitchen-layouts-workflow.html'),
         'blog-posts/office-design-future-of-work': path.resolve(__dirname, 'blog-posts/office-design-future-of-work.html'),
         'blog-posts/sustainable-materials': path.resolve(__dirname, 'blog-posts/sustainable-materials.html'),
-        'blog-posts/blog-post': path.resolve(__dirname, 'blog-posts/blog-post.js'),
-        'blog-posts/blog-post-css': path.resolve(__dirname, 'blog-posts/blog-post.css'),
       },
     },
   },
