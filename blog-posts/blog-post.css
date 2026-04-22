@@ -19,7 +19,7 @@ html::-webkit-scrollbar-track { background: #f1f1f1; }
 html::-webkit-scrollbar-thumb { background: var(--primary-yellow); border-radius: 4px; }
 
 body {
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     background: #fff;
     color: #111;
     line-height: 1.6;
