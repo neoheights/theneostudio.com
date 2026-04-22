@@ -1741,8 +1741,8 @@ header.scrolled .logo-wrapper {
 }
 
 .category-label {
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
+    font-family: var(--font-primary);
+    font-style: normal;
     font-size: 18px;
     color: #111;
     /* Deep Black for emphasis */
@@ -1752,11 +1752,10 @@ header.scrolled .logo-wrapper {
 }
 
 
-.blog-info h3 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
     font-size: 32px;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 700;
+    font-style: normal;
     line-height: 1.3;
     color: #8b7355;
     /* Luxurious Golden Color */
@@ -1814,7 +1813,7 @@ header.scrolled .logo-wrapper {
     /* Reduced from 56px */
     font-weight: 700;
     margin-bottom: 5px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
     color: var(--primary-yellow);
     /* Branding yellow for the counters */
 }
@@ -1938,8 +1937,8 @@ header.scrolled .logo-wrapper {
 }
 
 .story-sub {
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
+    font-family: var(--font-primary);
+    font-style: normal;
     font-size: 18px;
     color: #555;
 }
@@ -2004,7 +2003,7 @@ header.scrolled .logo-wrapper {
 }
 
 .why-header h2 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
     font-size: 48px;
     font-weight: 700;
     line-height: 1.1;
@@ -2066,7 +2065,7 @@ header.scrolled .logo-wrapper {
 }
 
 .why-card h3 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 700;
     color: #000;
@@ -2144,7 +2143,7 @@ header.scrolled .logo-wrapper {
 }
 
 .choose-item h3 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 700;
     color: var(--logo-blue);
@@ -2174,7 +2173,7 @@ header.scrolled .logo-wrapper {
 }
 
 .testimonials-header-grid h2 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
     font-weight: 700;
     color: #111;
 }
@@ -2566,7 +2565,7 @@ header.scrolled .logo-wrapper {
 .ctrl-btn span {
     font-size: 20px;
     font-weight: 800;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
 }
 
 .ctrl-btn.prev {
@@ -3703,7 +3702,7 @@ header.scrolled .logo-wrapper {
 }
 
 .cta-content h2 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-primary);
     /* Normal font */
     font-style: normal;
     font-size: 36px;
@@ -4731,8 +4730,8 @@ header.scrolled .logo-wrapper {
     color: #001f5c;
     font-weight: 500;
     letter-spacing: 0.5px;
-    font-family: 'Georgia', serif;
-    font-style: italic;
+    font-family: var(--font-primary);
+    font-style: normal;
 }
 
 .warranty-main-text {
