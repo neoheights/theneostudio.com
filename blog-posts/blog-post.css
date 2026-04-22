@@ -34,31 +34,31 @@ body.loaded { opacity: 1; }
 /* ── HEADER ── */
 header {
     position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-    padding: 18px 0;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+    background: #0A1B3D;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.4s ease;
 }
 header.scrolled {
-    padding: 10px 0;
+    padding: 8px 0;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 nav { display: flex; justify-content: space-between; align-items: center; }
 
 .logo-wrapper {
     display: flex; align-items: center; justify-content: center;
-    width: 58px; height: 58px; border-radius: 50%;
+    width: 52px; height: 52px; border-radius: 50%;
     background: var(--primary-yellow); border: 2px solid #001f5c;
     overflow: hidden; transition: all 0.3s ease;
 }
-header.scrolled .logo-wrapper { width: 46px; height: 46px; }
+header.scrolled .logo-wrapper { width: 44px; height: 44px; }
 .header-logo { width: 100%; height: 100%; object-fit: contain; }
-.logo-fallback { display: none; font-size: 9px; font-weight: 800; text-transform: uppercase; color: var(--logo-blue); text-align: center; }
+.logo-fallback { display: none; font-size: 9px; font-weight: 800; text-transform: uppercase; color: var(--text-white); text-align: center; }
 
 .nav-right { display: flex; align-items: center; }
 .nav-links { display: flex; list-style: none; gap: 40px; align-items: center; }
 .nav-links li a {
-    text-decoration: none; color: #333; font-size: 15px; font-weight: 500;
+    text-decoration: none; color: #fff; font-size: 15px; font-weight: 500;
     padding: 8px 12px; position: relative; transition: color 0.3s ease;
 }
 .nav-links li a::after {
@@ -71,7 +71,7 @@ header.scrolled .logo-wrapper { width: 46px; height: 46px; }
 .nav-links li a:hover, .nav-links li a.active { color: #000; }
 
 .menu-icon { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
-.menu-icon span { display: block; width: 24px; height: 2px; background: #0A1B3D; transition: 0.3s; }
+.menu-icon span { display: block; width: 24px; height: 2px; background: #ffffff; transition: 0.3s; }
 .menu-icon.toggle span:nth-child(1) { transform: rotate(-45deg) translate(-4px, 5px); }
 .menu-icon.toggle span:nth-child(2) { opacity: 0; }
 .menu-icon.toggle span:nth-child(3) { transform: rotate(45deg) translate(-4px, -5px); }

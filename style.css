@@ -129,7 +129,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 12px 0;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     background: rgba(10, 27, 61, 0.95);
     backdrop-filter: blur(10px);
@@ -141,7 +141,7 @@ header.scrolled {
     background: rgba(10, 27, 61, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 10px 0;
+    padding: 8px 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -156,8 +156,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 65px;
-    height: 65px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background: var(--primary-yellow);
     border: 2px solid #001f5c;
@@ -167,8 +167,8 @@ nav {
 }
 
 header.scrolled .logo-wrapper {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
 }
 
 .header-logo {
@@ -3585,13 +3585,12 @@ header.scrolled .logo-wrapper {
 }
 
 .script-heading {
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
+    font-family: var(--font-primary);
+    font-style: normal;
     font-size: 48px;
     color: var(--primary-yellow);
-    /* Gold/Bronze like script color */
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .header-text p {
