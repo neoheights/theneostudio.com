@@ -413,37 +413,55 @@ const initStatsCounter = () => {
 };
 
 // Feature Brand Reveals
-const initFeatureReveals = () => {
-    const section = document.querySelector('.feature-brand');
-    if (!section) return;
+const initGlobalReveals = () => {
+    // Select all sections that contain reveal classes
+    const revealSections = document.querySelectorAll('section');
+    
+    revealSections.forEach(section => {
+        const revealLeft = section.querySelectorAll('.reveal-left');
+        const revealRight = section.querySelectorAll('.reveal-right');
+        const revealUp = section.querySelectorAll('.reveal-up');
 
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            toggleActions: 'play none none none'
+        if (revealLeft.length || revealRight.length || revealUp.length) {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            if (revealLeft.length) {
+                tl.to(revealLeft, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.2,
+                    stagger: 0.2,
+                    ease: 'power3.out'
+                }, 0);
+            }
+
+            if (revealRight.length) {
+                tl.to(revealRight, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.2,
+                    stagger: 0.2,
+                    ease: 'power3.out'
+                }, 0.2);
+            }
+
+            if (revealUp.length) {
+                tl.to(revealUp, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    ease: 'power2.out'
+                }, 0.4);
+            }
         }
     });
-
-    tl.to('.reveal-left', {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-        ease: 'power3.out'
-    })
-        .to('.reveal-right', {
-            opacity: 1,
-            x: 0,
-            duration: 1.2,
-            ease: 'power3.out'
-        }, '-=1')
-        .to('.reveal-up', {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: 'back.out(1.7)'
-        }, '-=0.6');
 };
 
 const initTestimonialSlider = () => {
@@ -536,7 +554,7 @@ const initFAQAccordion = () => {
 // Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
     initPremiumReveal();
-    initFeatureReveals();
+    initGlobalReveals();
     initStatsCounter();
     initTestimonialSlider();
     initFAQAccordion();
