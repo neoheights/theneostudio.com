@@ -339,7 +339,7 @@
         <section class="banner-promo-section">
             <div class="container">
                 <div class="banner-card-wrapper">
-                    <img src="assets/banner.jpeg" alt="Join Neo Studio" class="promo-banner-img">
+                    <video class="promo-banner-img" autoplay loop muted playsinline><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260503_144509_89e2d612-8af2-45c3-90f4-4831bc60715d.mp4" type="video/mp4"></video>
                     <div class="banner-promo-overlay">
                         <h2 class="banner-overlay-text">Don't wait another day to create the <br> home you've always wanted</h2>
                         <a href="contact.html" class="btn-primary">Get Free Quote</a>
@@ -678,8 +678,9 @@
         </section>
 
         <!-- OUR TEAM Section -->
-        <section id="team" class="team-section">
-            <div class="container">
+        <section id="team" class="team-section" style="position: relative; overflow: hidden; background: #fff;">
+            <div id="team-dotfield-root" style="position: absolute; inset: 0; z-index: 0; pointer-events: none;"></div>
+            <div class="container" style="position: relative; z-index: 1;">
                 <div class="team-header-centered reveal-up">
                     <span class="section-tag">OUR TEAM</span>
                     <h2 class="team-main-title">Meet Our Experts</h2>

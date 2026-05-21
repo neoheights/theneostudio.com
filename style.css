@@ -1292,7 +1292,6 @@ header.scrolled .logo-wrapper {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/residencial%20interiors.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     padding: 120px 0;
     text-align: center;
     color: #fff;
@@ -1350,6 +1349,10 @@ header.scrolled .logo-wrapper {
     padding: 0;
     background: transparent;
 }
+.banner-promo-section .container {
+    max-width: 100%;
+    padding: 0;
+}
 
 .banner-card-wrapper {
     position: relative;
@@ -1367,19 +1370,20 @@ header.scrolled .logo-wrapper {
 
 .banner-promo-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 40px;
+    left: 40px;
+    transform: none;
+    text-align: left;
     width: 90%;
+    max-width: 600px;
 }
 
 .banner-overlay-text {
     font-size: 32px;
     font-weight: 800;
-    color: #fff;
+    color: #000;
     margin-bottom: 30px;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    text-shadow: none;
     line-height: 1.2;
 }
 
@@ -1388,10 +1392,15 @@ header.scrolled .logo-wrapper {
 
 @media (max-width: 768px) {
     .banner-card-wrapper {
-        border-radius: 10px;
+        border-radius: 0;
     }
     .promo-banner-img {
         min-height: 260px;
+    }
+    .banner-promo-overlay {
+        top: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
     }
     .banner-overlay-text {
         font-size: 22px;
@@ -1987,6 +1996,13 @@ header.scrolled .logo-wrapper {
 .reveal-up {
     opacity: 0;
     transition: all 1s ease;
+}
+
+.reveal-left.reveal,
+.reveal-right.reveal,
+.reveal-up.reveal {
+    opacity: 1;
+    transform: translate(0);
 }
 
 .reveal-left {
