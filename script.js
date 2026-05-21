@@ -82,10 +82,14 @@ const initPremiumReveal = () => {
                 // Add split characters before
                 if (parts[0]) {
                     parts[0].split('').forEach(char => {
-                        const span = document.createElement('span');
-                        applyRevealStyles(span);
-                        span.textContent = char === ' ' ? '\u00A0' : char;
-                        line.appendChild(span);
+                        if (char === ' ') {
+                            line.appendChild(document.createTextNode(' '));
+                        } else {
+                            const span = document.createElement('span');
+                            applyRevealStyles(span);
+                            span.textContent = char;
+                            line.appendChild(span);
+                        }
                     });
                 }
 
@@ -110,10 +114,14 @@ const initPremiumReveal = () => {
                 // Add split characters after
                 if (parts[1]) {
                     parts[1].split('').forEach(char => {
-                        const span = document.createElement('span');
-                        applyRevealStyles(span);
-                        span.textContent = char === ' ' ? '\u00A0' : char;
-                        line.appendChild(span);
+                        if (char === ' ') {
+                            line.appendChild(document.createTextNode(' '));
+                        } else {
+                            const span = document.createElement('span');
+                            applyRevealStyles(span);
+                            span.textContent = char;
+                            line.appendChild(span);
+                        }
                     });
                 }
 
@@ -129,10 +137,14 @@ const initPremiumReveal = () => {
                     if (node.nodeType === Node.TEXT_NODE) {
                         const text = node.textContent;
                         [...text].forEach(char => {
-                            const span = document.createElement('span');
-                            applyRevealStyles(span);
-                            span.textContent = char === ' ' ? '\u00A0' : char;
-                            line.appendChild(span);
+                            if (char === ' ') {
+                                line.appendChild(document.createTextNode(' '));
+                            } else {
+                                const span = document.createElement('span');
+                                applyRevealStyles(span);
+                                span.textContent = char;
+                                line.appendChild(span);
+                            }
                         });
                     } else if (node.nodeType === Node.ELEMENT_NODE) {
                         const tagName = node.tagName.toLowerCase();
@@ -140,15 +152,19 @@ const initPremiumReveal = () => {
                         const text = node.textContent;
 
                         [...text].forEach(char => {
-                            const outerSpan = document.createElement(tagName);
-                            if (className) outerSpan.className = className;
+                            if (char === ' ') {
+                                line.appendChild(document.createTextNode(' '));
+                            } else {
+                                const outerSpan = document.createElement(tagName);
+                                if (className) outerSpan.className = className;
 
-                            const innerSpan = document.createElement('span');
-                            applyRevealStyles(innerSpan);
-                            innerSpan.textContent = char === ' ' ? '\u00A0' : char;
+                                const innerSpan = document.createElement('span');
+                                applyRevealStyles(innerSpan);
+                                innerSpan.textContent = char;
 
-                            outerSpan.appendChild(innerSpan);
-                            line.appendChild(outerSpan);
+                                outerSpan.appendChild(innerSpan);
+                                line.appendChild(outerSpan);
+                            }
                         });
                     }
                 };
