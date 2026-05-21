@@ -1,8 +1,23 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
 
 // Register GSAP plugins immediately
 gsap.registerPlugin(ScrollTrigger);
+
+// Initialize Lenis for smooth scrolling
+const lenis = new Lenis({
+    autoRaf: true,
+});
+
+// Sync Lenis with GSAP ScrollTrigger
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
 
 // Typewriter effect removed - replaced with React FlipWords component in main.tsx
 window.addEventListener('load', () => {
