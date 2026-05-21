@@ -5458,6 +5458,18 @@ li, span, small {
 @media (max-width: 768px) {
     .team-grid { grid-template-columns: 1fr; }
     .team-main-title { font-size: 38px; }
+    
+    .portfolio-controls {
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .tab-btn {
+        font-size: 18px;
+        padding: 10px 5px;
+    }
 }
 
 
