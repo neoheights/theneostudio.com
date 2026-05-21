@@ -1372,7 +1372,7 @@ header.scrolled .logo-wrapper {
 
 .banner-promo-overlay {
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: 40px;
     transform: none;
     text-align: left;
@@ -1400,7 +1400,7 @@ header.scrolled .logo-wrapper {
         min-height: 260px;
     }
     .banner-promo-overlay {
-        top: 20px;
+        top: 10px;
         left: 20px;
         width: calc(100% - 40px);
     }
