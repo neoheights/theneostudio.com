@@ -1364,8 +1364,10 @@ header.scrolled .logo-wrapper {
 
 .promo-banner-img {
     width: 100%;
+    max-height: 80vh;
     display: block;
     object-fit: cover;
+    object-position: center bottom;
 }
 
 .banner-promo-overlay {
