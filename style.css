@@ -5378,7 +5378,10 @@ li, span, small {
 .team-desc-centered {
     font-size: 16px;
     line-height: 1.6;
-    color: #666;
+    color: #000;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
 }
 
 .team-grid {
@@ -5389,7 +5392,7 @@ li, span, small {
 
 .team-card {
     background: #fff;
-    border: 1px solid #eee;
+    border: 2px solid var(--primary-yellow);
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
